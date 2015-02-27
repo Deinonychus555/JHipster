@@ -75,15 +75,15 @@ public class PersonResourceTest {
         assertThat(personRepository.findAll()).hasSize(0);
 
         // Create the Person
-        restPersonMockMvc.perform(post("/api/persons")
+        restPersonMockMvc.perform(post("/api/people")
                 .contentType(TestUtil.APPLICATION_JSON_UTF8)
                 .content(TestUtil.convertObjectToJsonBytes(person)))
                 .andExpect(status().isOk());
 
         // Validate the Person in the database
-        List<Person> persons = personRepository.findAll();
-        assertThat(persons).hasSize(1);
-        Person testPerson = persons.iterator().next();
+        List<Person> people = personRepository.findAll();
+        assertThat(people).hasSize(1);
+        Person testPerson = people.iterator().next();
         assertThat(testPerson.getFirstName()).isEqualTo(DEFAULT_FIRST_NAME);
         assertThat(testPerson.getLastName()).isEqualTo(DEFAULT_LAST_NAME);
         assertThat(testPerson.getAge()).isEqualTo(DEFAULT_AGE);
@@ -95,8 +95,8 @@ public class PersonResourceTest {
         // Initialize the database
         personRepository.saveAndFlush(person);
 
-        // Get all the persons
-        restPersonMockMvc.perform(get("/api/persons"))
+        // Get all the people
+        restPersonMockMvc.perform(get("/api/people"))
                 .andExpect(status().isOk())
                 .andExpect(content().contentType(MediaType.APPLICATION_JSON))
                 .andExpect(jsonPath("$.[0].id").value(person.getId().intValue()))
@@ -112,7 +112,7 @@ public class PersonResourceTest {
         personRepository.saveAndFlush(person);
 
         // Get the person
-        restPersonMockMvc.perform(get("/api/persons/{id}", person.getId()))
+        restPersonMockMvc.perform(get("/api/people/{id}", person.getId()))
             .andExpect(status().isOk())
             .andExpect(content().contentType(MediaType.APPLICATION_JSON))
             .andExpect(jsonPath("$.id").value(person.getId().intValue()))
@@ -125,7 +125,7 @@ public class PersonResourceTest {
     @Transactional
     public void getNonExistingPerson() throws Exception {
         // Get the person
-        restPersonMockMvc.perform(get("/api/persons/{id}", 1L))
+        restPersonMockMvc.perform(get("/api/people/{id}", 1L))
                 .andExpect(status().isNotFound());
     }
 
@@ -139,15 +139,15 @@ public class PersonResourceTest {
         person.setFirstName(UPDATED_FIRST_NAME);
         person.setLastName(UPDATED_LAST_NAME);
         person.setAge(UPDATED_AGE);
-        restPersonMockMvc.perform(post("/api/persons")
+        restPersonMockMvc.perform(post("/api/people")
                 .contentType(TestUtil.APPLICATION_JSON_UTF8)
                 .content(TestUtil.convertObjectToJsonBytes(person)))
                 .andExpect(status().isOk());
 
         // Validate the Person in the database
-        List<Person> persons = personRepository.findAll();
-        assertThat(persons).hasSize(1);
-        Person testPerson = persons.iterator().next();
+        List<Person> people = personRepository.findAll();
+        assertThat(people).hasSize(1);
+        Person testPerson = people.iterator().next();
         assertThat(testPerson.getFirstName()).isEqualTo(UPDATED_FIRST_NAME);
         assertThat(testPerson.getLastName()).isEqualTo(UPDATED_LAST_NAME);
         assertThat(testPerson.getAge()).isEqualTo(UPDATED_AGE);
@@ -160,12 +160,12 @@ public class PersonResourceTest {
         personRepository.saveAndFlush(person);
 
         // Get the person
-        restPersonMockMvc.perform(delete("/api/persons/{id}", person.getId())
+        restPersonMockMvc.perform(delete("/api/people/{id}", person.getId())
                 .accept(TestUtil.APPLICATION_JSON_UTF8))
                 .andExpect(status().isOk());
 
         // Validate the database is empty
-        List<Person> persons = personRepository.findAll();
-        assertThat(persons).hasSize(0);
+        List<Person> people = personRepository.findAll();
+        assertThat(people).hasSize(0);
     }
 }

@@ -1,0 +1,44 @@
+{
+    "relationships": [
+        {
+            "relationshipId": 1,
+            "relationshipName": "owner",
+            "relationshipNameCapitalized": "Owner",
+            "relationshipFieldName": "owner",
+            "otherEntityName": "person",
+            "relationshipType": "many-to-many",
+            "otherEntityNameCapitalized": "Person",
+            "ownerSide": false
+        }
+    ],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "name",
+            "fieldType": "String",
+            "fieldNameCapitalized": "Name",
+            "fieldNameUnderscored": "name"
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "breed",
+            "fieldType": "String",
+            "fieldNameCapitalized": "Breed",
+            "fieldNameUnderscored": "breed"
+        },
+        {
+            "fieldId": 3,
+            "fieldName": "age",
+            "fieldType": "Integer",
+            "fieldNameCapitalized": "Age",
+            "fieldNameUnderscored": "age"
+        }
+    ],
+    "fieldsContainOwnerManyToMany": false,
+    "fieldsContainOneToMany": false,
+    "fieldsContainLocalDate": false,
+    "fieldsContainCustomTime": false,
+    "fieldsContainBigDecimal": false,
+    "fieldsContainDateTime": false,
+    "changelogDate": "20150226195121"
+}
