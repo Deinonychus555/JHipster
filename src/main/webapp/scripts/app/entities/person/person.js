@@ -11,7 +11,7 @@ angular.module('jhipsterApp')
                 },
                 views: {
                     'content@': {
-                        templateUrl: 'scripts/app/entities/person/persons.html',
+                        templateUrl: 'scripts/app/entities/person/people.html',
                         controller: 'PersonController'
                     }
                 },

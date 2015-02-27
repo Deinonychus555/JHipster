@@ -2,11 +2,11 @@
 
 angular.module('jhipsterApp')
     .controller('PersonController', function ($scope, Person, Animal) {
-        $scope.persons = [];
+        $scope.people = [];
         $scope.animals = Animal.query();
         $scope.loadAll = function() {
             Person.query(function(result) {
-               $scope.persons = result;
+               $scope.people = result;
             });
         };
         $scope.loadAll();
