@@ -1,0 +1,21 @@
+{
+    "jhipsterApp": {
+        "engine" : {
+            "home": {
+                "title": "Engines",
+                "createLabel": "Créer un nouveau Engine",
+                "createOrEditLabel": "Créer ou éditer un Engine"
+            },
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Engine {{ id }} ?"
+            },
+            "detail": {
+                "title": "Engine"
+            },
+            "model": "Model",
+            "power": "Power",
+            "car": "car"
+        }
+    }
+}
+

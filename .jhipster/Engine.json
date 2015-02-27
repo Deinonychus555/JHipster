@@ -1,0 +1,37 @@
+{
+    "relationships": [
+        {
+            "relationshipId": 1,
+            "relationshipName": "car",
+            "relationshipNameCapitalized": "Car",
+            "relationshipFieldName": "car",
+            "otherEntityName": "car",
+            "relationshipType": "one-to-one",
+            "otherEntityNameCapitalized": "Car",
+            "ownerSide": false
+        }
+    ],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "model",
+            "fieldType": "String",
+            "fieldNameCapitalized": "Model",
+            "fieldNameUnderscored": "model"
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "power",
+            "fieldType": "String",
+            "fieldNameCapitalized": "Power",
+            "fieldNameUnderscored": "power"
+        }
+    ],
+    "fieldsContainOwnerManyToMany": false,
+    "fieldsContainOneToMany": false,
+    "fieldsContainLocalDate": false,
+    "fieldsContainCustomTime": false,
+    "fieldsContainBigDecimal": false,
+    "fieldsContainDateTime": false,
+    "changelogDate": "20150227133001"
+}

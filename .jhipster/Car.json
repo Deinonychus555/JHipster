@@ -1,0 +1,37 @@
+{
+    "relationships": [
+        {
+            "relationshipId": 1,
+            "relationshipName": "engine",
+            "relationshipNameCapitalized": "Engine",
+            "relationshipFieldName": "engine",
+            "otherEntityName": "engine",
+            "relationshipType": "one-to-one",
+            "otherEntityNameCapitalized": "Engine",
+            "ownerSide": true
+        }
+    ],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "model",
+            "fieldType": "String",
+            "fieldNameCapitalized": "Model",
+            "fieldNameUnderscored": "model"
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "numberPlate",
+            "fieldType": "String",
+            "fieldNameCapitalized": "NumberPlate",
+            "fieldNameUnderscored": "number_plate"
+        }
+    ],
+    "fieldsContainOwnerManyToMany": false,
+    "fieldsContainOneToMany": false,
+    "fieldsContainLocalDate": false,
+    "fieldsContainCustomTime": false,
+    "fieldsContainBigDecimal": false,
+    "fieldsContainDateTime": false,
+    "changelogDate": "20150227133309"
+}

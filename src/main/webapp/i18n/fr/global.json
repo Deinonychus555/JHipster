@@ -8,6 +8,10 @@
                 "main": "Entités",
                 "animal": "Animal",
                 "person": "Person",
+                "author": "Author",
+                "book": "Book",
+                "engine": "Engine",
+                "car": "Car",
                 "additionalEntity": "JHipster will add addtional entities"
             },
             "account": {

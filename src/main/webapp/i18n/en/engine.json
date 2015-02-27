@@ -1,0 +1,20 @@
+{
+    "jhipsterApp": {
+        "engine" : {
+            "home": {
+                "title": "Engines",
+                "createLabel": "Create a new Engine",
+                "createOrEditLabel": "Create or edit a Engine"
+            },
+            "delete": {
+                "question": "Are you sure you want to delete Engine {{ id }}?"
+            },
+            "detail": {
+                "title": "Engine"
+            },
+            "model": "Model",
+            "power": "Power",
+            "car": "car"
+        }
+    }
+}
