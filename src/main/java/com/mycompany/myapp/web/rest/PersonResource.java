@@ -27,9 +27,9 @@ public class PersonResource {
     private PersonRepository personRepository;
 
     /**
-     * POST  /persons -> Create a new person.
+     * POST  /people -> Create a new person.
      */
-    @RequestMapping(value = "/persons",
+    @RequestMapping(value = "/people",
             method = RequestMethod.POST,
             produces = MediaType.APPLICATION_JSON_VALUE)
     @Timed
@@ -39,9 +39,9 @@ public class PersonResource {
     }
 
     /**
-     * GET  /persons -> get all the persons.
+     * GET  /people -> get all the people.
      */
-    @RequestMapping(value = "/persons",
+    @RequestMapping(value = "/people",
             method = RequestMethod.GET,
             produces = MediaType.APPLICATION_JSON_VALUE)
     @Timed
@@ -51,9 +51,9 @@ public class PersonResource {
     }
 
     /**
-     * GET  /persons/:id -> get the "id" person.
+     * GET  /people/:id -> get the "id" person.
      */
-    @RequestMapping(value = "/persons/{id}",
+    @RequestMapping(value = "/people/{id}",
             method = RequestMethod.GET,
             produces = MediaType.APPLICATION_JSON_VALUE)
     @Timed
@@ -67,9 +67,9 @@ public class PersonResource {
     }
 
     /**
-     * DELETE  /persons/:id -> delete the "id" person.
+     * DELETE  /people/:id -> delete the "id" person.
      */
-    @RequestMapping(value = "/persons/{id}",
+    @RequestMapping(value = "/people/{id}",
             method = RequestMethod.DELETE,
             produces = MediaType.APPLICATION_JSON_VALUE)
     @Timed
