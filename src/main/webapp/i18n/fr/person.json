@@ -1,0 +1,22 @@
+{
+    "jhipsterApp": {
+        "person" : {
+            "home": {
+                "title": "Persons",
+                "createLabel": "Créer un nouveau Person",
+                "createOrEditLabel": "Créer ou éditer un Person"
+            },
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Person {{ id }} ?"
+            },
+            "detail": {
+                "title": "Person"
+            },
+            "firstName": "FirstName",
+            "lastName": "LastName",
+            "age": "Age",
+            "pet": "pet"
+        }
+    }
+}
+

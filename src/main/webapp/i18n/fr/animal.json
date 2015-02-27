@@ -1,0 +1,22 @@
+{
+    "jhipsterApp": {
+        "animal" : {
+            "home": {
+                "title": "Animals",
+                "createLabel": "Créer un nouveau Animal",
+                "createOrEditLabel": "Créer ou éditer un Animal"
+            },
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Animal {{ id }} ?"
+            },
+            "detail": {
+                "title": "Animal"
+            },
+            "name": "Name",
+            "breed": "Breed",
+            "age": "Age",
+            "owner": "owner"
+        }
+    }
+}
+
