@@ -65,6 +65,20 @@ public class PersonResource {
                 HttpStatus.OK))
             .orElse(new ResponseEntity<>(HttpStatus.NOT_FOUND));
     }
+    
+    
+    /**
+     * GET  /people/:breed -> 
+     */
+    @RequestMapping(value = "/people/pet_breed/{breed}",
+            method = RequestMethod.GET,
+            produces = MediaType.APPLICATION_JSON_VALUE)
+    @Timed
+    public List<Person> getPeopleByPetBreed(@PathVariable String breed) {
+        log.debug("REST request to get People : {}", breed);
+        return personRepository.findByPetsBreed(breed);
+            
+    }
 
     /**
      * DELETE  /people/:id -> delete the "id" person.
